@@ -1,0 +1,87 @@
+/* Call Back */
+#call-back
+  padding: 100px 0
+  background: #222222
+
+.call-back-content
+  .section-title
+    color: #FFF
+    margin-bottom: 40px
+
+  p
+    color: #FFF
+    +line-height(26)
+
+
+.call-back-form
+  margin-top: 20px
+  .form-subject
+    width: 100%
+    border: 1px solid #636565
+    margin-bottom: 20px
+    height: 40px
+    background: transparent
+    outline: none
+    padding: 10px
+
+  .full
+    padding: 0 10px
+
+  .half-input
+    position: relative
+    float: left
+    width: 50%
+    padding: 0 10px
+
+    label
+      position: absolute
+      top: -10px
+      left: 30px
+      background: #222
+      z-index: 100
+      padding: 0 10px
+
+    .call-back-input
+      width: 100%
+      background: transparent
+      border: 1px solid #636565
+      margin-bottom: 20px
+      outline: none
+      position: relative
+      color: #FFF
+      padding: 10px
+      transition: all 0.5s ease-in-out
+
+    &:hover, &:focus
+      &:before, &:after
+        background: #a6a7a7
+
+      .call-back-input
+        border-color: #a6a7a7
+
+
+  .dt-btn
+    padding: 6px 41px
+    +font-size(14)
+    position: absolute
+    bottom: -30px
+    right: 5px
+
+    > i
+      display: none
+
+    &.clicked
+      > i
+        display: block
+      > span
+        display: none
+
+  .btn-skew
+    &:after
+      height: 62px
+
+    &:hover
+      &:after
+        height: 120px
+
+

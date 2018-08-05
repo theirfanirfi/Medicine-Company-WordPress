@@ -1,0 +1,134 @@
+/* News All */
+.blog-archive-section
+  padding: 50px 0
+
+.blog-all-item
+  .news
+    margin-bottom: 40px
+    .news-thumbs
+      img
+        width: 100%
+
+    .post-date
+      padding: 10px 0
+      a
+        color: $color-theme
+        text-decoration: none
+
+        i
+          margin-right: 10px
+    h3
+      margin-top: 0
+      margin-bottom: 10px
+      +font-size(20)
+
+      a
+        text-decoration: none
+        color: #111
+        transition: all 0.3s ease-in-out
+
+        &:hover
+          color: $color_theme
+
+
+    .news-content
+      padding: 20px 0
+      border-right: 1px solid #ededed
+      border-bottom: 1px solid #ededed
+      border-top: 1px solid #ededed
+      .news-details
+        padding-bottom: 10px
+        padding-left: 0
+        margin: 0
+        list-style: none
+
+        li
+          display: inline-block
+          padding-right: 5px
+
+          a
+            color: #111
+            text-decoration: none
+
+            i
+              padding-right: 5px
+
+          .dt-social-link
+            li
+              padding: 0 2px
+
+              a
+                color: #bdbdbd
+
+      p
+        color: #6d6c6c
+        +line-height(26)
+        margin-bottom: 20px
+
+    .btn-skew
+      &:after
+        height: 65px
+
+      &:hover
+        &:after
+          height: 150px
+
+.page-control
+  width: 400px
+  position: relative
+  margin: 30px auto
+
+  .control
+    padding: 10px 0
+    margin: 0
+    list-style: none
+    text-align: center
+
+    li
+      display: inline-block
+      border: 1px solid #ededed
+      height: 40px
+      width: 40px
+      padding: 10px 0
+      transition: all 0.5s ease-in-out
+      margin: 0 5px
+
+      a
+        color: #111
+        font-weight: 700
+        text-decoration: none
+        display: block
+
+      &:hover
+        background: $color_theme
+        border-color: transparent
+
+        a
+          color: #FFF
+
+  .banner-next, .banner-prev
+    border-color: #f1f1f1
+    top: 12%
+
+    &:after, &:before
+      background: #f1f1f1
+
+    &:hover
+      border-color: $color_theme
+
+      &:after, &:before
+        background: $color_theme
+      .prev-btn
+        background-image: url(../img/left-arrow-two.svg)
+
+      .next-btn
+        background-image: url(../img/right-arrow-two.svg)
+
+  .banner-prev
+    .prev-btn
+      background-image: url(../img/left-arrow-three.svg)
+
+  .banner-next
+    .next-btn
+      background-image: url(../img/right-arrow-three.svg)
+

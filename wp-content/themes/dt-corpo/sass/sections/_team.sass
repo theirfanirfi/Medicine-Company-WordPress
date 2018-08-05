@@ -1,0 +1,170 @@
+// Member Style 1
+.corpo_team_member_1
+  display: block
+  position: relative
+  overflow: hidden
+  
+  @media (max-width: 767px)
+    max-width: 300px
+    margin: 0 auto
+
+  .corpo_team_members &
+    margin-bottom: 30px
+
+  > img
+    width: 100%
+    height: auto;
+
+  > .overlay
+    padding: 20px 30px
+    opacity: 0
+    transition: all 0.3s ease-in-out
+    z-index: 1
+
+    > .overlay-link
+      position: absolute
+      z-index: 1
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      color: #fff
+      text-decoration: none
+      opacity: 0
+      
+      > .more-link
+        position: absolute
+        right: 5px
+        bottom: 5px
+
+    > .dt-social-link
+      position: relative
+      z-index: 2
+      text-align: right
+      transform: translateX(100%)
+      transition: all 0.5s ease
+
+      > li
+        padding: 0 6px
+        display: inline-block
+        a
+          color: #fff;
+
+          &:hover
+            color: $color_theme
+
+    > .name
+      position: absolute
+      bottom: 30px
+      right: 30px
+      text-align: right
+      transform: translateY(85px)
+      transition: all 0.5s ease
+
+      > h4
+        color: $color_theme
+        font-weight: 700
+        margin-top: 0
+
+      > p
+        color: #FFF
+        margin-bottom: 0
+
+  &:hover
+    > .overlay
+      opacity: 1
+
+      > .dt-social-link
+        transform: translateX(0)
+
+      > .name
+        transform: translateY(0)
+
+// Member Style 2
+.corpo_team_member_2
+  position: relative
+  text-align: left
+  overflow: hidden
+
+  @media (max-width: 767px)
+    max-width: 300px
+    margin: 0 auto
+
+  .corpo_team_members &
+    margin-bottom: 30px
+
+  > img
+    width: 100%
+    height: auto
+
+  > .overlay
+    top: 78%
+    opacity: 1
+    padding: 20px 30px
+    transition: all 0.3s ease-in-out
+
+    > .overlay-link
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 1
+      opacity: 0
+      
+      > .more-link
+        position: absolute
+        right: 5px
+        bottom: 5px
+
+    > h4
+      color: $color_theme
+      +font-size(18)
+      font-weight: 700
+      margin-top: 0
+
+    > span
+      color: #FFF
+      margin-bottom: 20px
+      display: block
+      padding-bottom: 20px
+      position: relative
+
+      &:after
+        position: absolute
+        content: ''
+        background: $color_theme
+        width: 50px
+        height: 4px
+        left: 0
+        bottom: 0
+        opacity: 0
+        transition: all 0.3s ease-in-out
+
+    > p
+      color: #FFF
+      opacity: 0
+      transition: all 0.3s ease-in-out
+
+    > .dt-social-link
+      position: relative
+      transform: translateX(0) !important
+      z-index: 2
+      opacity: 0
+      transition: all 0.3s ease-in-out
+      a
+        color: #fff;
+
+        &:hover
+          color: $color_theme
+
+  &:hover
+    > .overlay
+      top: 0
+      padding-top: 130px
+
+      > p,
+      > .dt-social-link,
+      > span:after
+          opacity: 1
+

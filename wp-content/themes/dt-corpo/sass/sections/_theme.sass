@@ -1,0 +1,48 @@
+/* Theme */
+#theme
+  position: relative
+  padding: 90px 0
+  background-size: cover
+  background-repeat: no-repeat
+
+  .overlay
+    background-color: rgba(0, 0, 0, 0.8)
+
+  .theme-title
+    color: #FFF
+    +font-size(30)
+    font-weight: 700
+    margin-bottom: 20px
+
+  .theme-caption
+    color: #cecece
+    +line-height(26)
+    margin-bottom: 30px
+
+
+  .theme-discription
+    margin-bottom: 50px
+    p
+      color: #FFF
+      +line-height(26)
+      position: relative
+      margin-left: 25px
+
+      &:before
+        position: absolute
+        content: ''
+        height: 10px
+        width: 10px
+        left: -25px
+        top: 8px
+        background: $color_theme
+
+
+  .btn-skew
+    &:after
+      height: 70px
+
+    &:hover
+      &:after
+        height: 200px
+

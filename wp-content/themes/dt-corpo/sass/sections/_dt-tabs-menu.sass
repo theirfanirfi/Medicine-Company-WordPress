@@ -1,0 +1,156 @@
+.corpo_services_tab
+  display: flex
+  align-items: center
+  padding-top: 10px
+  padding-bottom: 10px
+
+  > .tab_menu_items
+    border-right: 1px solid #ededed
+
+    > ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+      > li
+        text-align: center
+        margin-bottom: 30px
+
+        > a
+          text-decoration: none
+          display: inline-block
+
+          > span
+            display: block
+
+          > .title
+            +font-size(16)
+            font-weight: 600
+            text-transform: uppercase
+            color: #111
+
+          > .icon-box
+            position: relative
+            height: 100px
+            width: 100px
+            border-radius: 50%
+            background: #eeeeee
+            cursor: pointer
+            transition: all 0.3s ease-in-out
+            z-index: 1
+            margin: 0 auto 10px auto
+
+            &:after
+              content: ''
+              position: absolute
+              height: 88%
+              width: 88%
+              border-radius: 50%
+              left: 50%
+              top: 50%
+              transform: translate(-50%, -50%)
+              background: #f5f5f7
+              transition: all 0.3s ease-in-out
+              z-index: 2
+
+            > i
+              position: absolute
+              z-index: 3
+              height: 76%
+              width: 76%
+              left: 50%
+              top: 50%
+              transform: translate(-50%, -50%)
+              color: #111
+              font-size: 30px
+              border-radius: 50%
+              background: #f5f5f7
+              transition: all 0.3s ease-in-out
+
+              &:before
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        
+        > a > .icon-box:hover,
+        &.active > a > .icon-box
+          background: #d7eeff
+
+          &:after
+            background: #97d2ff
+
+          > i
+            background: $color_theme
+            color: #FFF
+
+  > .tab_content_items
+    > .tab-pane
+      display: none
+      padding-left: 30px
+
+      &.active
+        display: block
+
+      > .title
+        +font-size(36)
+        line-height: 1
+        font-weight: 600
+        color: #111
+        margin-top: 0
+        margin-bottom: 10px
+
+      > .subtitle
+        color: $color_theme
+        font-weight: 600
+        text-transform: uppercase
+
+      > .content
+        margin: 30px 0
+
+      > .iconic
+        margin: 30px 0
+
+        > li
+          margin-bottom: 10px
+          color: #111
+        
+        @media (min-width: 600px)
+          +clearfix()
+
+          > li
+            float: left
+            width: 50%
+
+  @media (max-width: 992px)
+    display: block
+
+    > .tab_menu_items
+      border-bottom: 1px solid #ededed
+      margin-bottom: 30px
+      border-right: none
+
+      > ul
+        text-align: center
+
+        > li
+          padding: 0 5px
+          margin-bottom: 15px
+          display: inline-block
+
+    > .tab_content_items
+      > .tab-pane
+        padding-left: 0
+
+  @media (max-width: 768px)
+    > .tab_menu_items
+      > ul > li > a
+        > .title
+          font-size: 1em
+
+        > .icon-box
+          width: 60px
+          height: 60px
+
+          > i
+            font-size: 1.3em

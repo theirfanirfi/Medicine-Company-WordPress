@@ -1,0 +1,377 @@
+.corpo_inside_page:not(.for-vc)
+  margin-bottom: 50px
+  margin-top: 50px
+  
+.corpo_blog_posts,
+.corpo_list_archive.two_column
+  column-count: 2
+  column-gap: 0
+  column-span: all
+  margin-left: -15px
+  margin-right: -15px
+  +clearfix()
+
+  .corpo_blog_post_1,
+  .corpo_blog_post_2
+    padding-left: 15px
+    padding-right: 15px
+    position: relative
+    break-inside: avoid
+
+  @media (max-width: 992px)
+    column-count: 1
+
+// Style 1
+.corpo_blog_post_1
+  padding-bottom: 30px
+  position: relative
+
+  > .item_top_area
+    border-bottom: 1px solid #e5e5e5
+    border-left: 1px solid #e5e5e5
+    padding-bottom: 15px
+
+    > .meta
+      list-style: none
+      position: absolute
+      width: 110px
+      padding: 0 15px 0 0px
+      margin: 0
+
+      @media (min-width: 992px) and (max-width: 1200px)
+        width: 90px;
+
+      > li
+        text-align: right
+        border-bottom: 1px solid #e5e5e5
+        text-align: right
+        padding: 10px 0 10px 10px
+
+        > span,
+        > a
+          display: block
+          // color: #7e7e7e
+
+          &:hover,
+          &:focus
+            text-decoration: none
+
+          > span
+            display: block
+
+            &:first-child
+              font-size: 28px
+              color: #111
+              @media (min-width: 992px) and (max-width: 1200px)
+                font-size: 18px
+
+            &:last-child
+              color: #7e7e7e
+
+        
+
+        &:last-child
+          border-bottom: none
+
+    > .thumb
+      padding-left: 110px
+
+      @media (min-width: 992px) and (max-width: 1200px)
+        padding-left: 90px
+
+      > img
+        width: 100%
+        height: auto
+
+  > .item_content_area
+    margin-left: 110px
+    border-right: 1px solid #e5e5e5
+    border-bottom: 1px solid #e5e5e5
+    padding: 20px 20px 20px 0
+
+    > .title
+      +font-size(20)
+      margin-top: 0
+
+      > a
+        color: #111
+        transition: all 0.3s ease-in-out
+
+        &:hover
+          color: $color-theme
+
+    > p
+      +line-height(26)
+      margin-bottom: 20px
+
+    > .read-more-btn
+      padding: 6px 20px
+      +font-size(14)
+
+      &:after
+        height: 60px
+
+      &:hover:after
+        height: 200px
+
+  &:not(.has-post-thumbnail)
+    > .item_top_area
+      border-top: 1px solid #e5e5e5
+      border-right: 1px solid #e5e5e5
+      border-bottom: none
+      border-left: none
+      padding-top: 10px
+      padding-bottom: 0
+
+      > .meta
+        width: auto
+        position: relative
+        padding: 0
+
+        > li
+          display: inline-block
+          padding: 0
+          border-bottom: none
+          margin-right: 5px
+
+          > span,
+          > a
+            > span
+              display: inline-block
+
+              &:first-child
+                font-size: inherit
+
+          > a.date
+            &:before
+              content: '\f073'
+              font-family: FontAwesome
+              color: #111
+              margin-right: 5px
+
+            > span
+              color: #7e7e7e
+
+    > .item_content_area
+      margin-left: 0
+
+  @media (max-width: 600px)
+    > .item_top_area
+      border-top: 1px solid #e5e5e5
+      border-right: 1px solid #e5e5e5
+      border-bottom: none
+      border-left: none
+      padding-top: 10px
+      padding-bottom: 0
+
+      > .thumb
+        padding: 10px 10px 0 0
+
+      > .meta
+        width: auto
+        position: relative
+        padding: 0
+
+        > li
+          display: inline-block
+          padding: 0
+          border-bottom: none
+          margin-right: 5px
+
+          > span,
+          > a
+            > span
+              display: inline-block
+
+              &:first-child
+                font-size: inherit
+
+          > a.date
+            &:before
+              content: '\f073'
+              font-family: FontAwesome
+              color: #111
+              margin-right: 5px
+
+            > span
+              color: #7e7e7e
+
+    > .item_content_area
+      margin-left: 0
+
+// Style 2
+.corpo_blog_post_2
+  padding-bottom: 30px
+  position: relative
+  +clearfix()
+
+  > i
+    position: absolute
+    top: 0
+    right: 0
+    +font-size(24)
+    color: $color_theme
+    transform: rotate(45deg)
+    margin-right: 10px
+
+    .two_column &
+      right: 15px
+
+  > .post-thumbnail
+    width: 400px
+    max-height: 280px
+    float: left
+    overflow: hidden
+
+    > a
+      display: block
+
+      > img
+        width: 100%
+        height: auto
+
+    .two_column &
+      width: auto
+      float: none
+      margin-bottom: 20px
+      text-align: center
+
+      > a > img
+        width: auto
+        max-width: 100%
+        text-align: center
+
+  &.has-post-thumbnail:not(.corpo_thumbnail_disabled) > .entry-header,
+  &.has-post-thumbnail:not(.corpo_thumbnail_disabled) > .entry-excerpt
+    margin-left: 420px
+
+    .two_column &
+      margin-left: 0
+
+  @media (max-width: 1200px)
+
+    > .post-thumbnail
+      width: 290px
+
+    > .entry-header
+      > .entry-meta
+        margin-bottom: 10px
+
+      > .entry-title
+        margin-bottom: 10px
+        +font-size(18)
+
+    > .entry-excerpt
+      padding: 10px 10px 10px 0
+
+      > .entry-tcs
+        margin-bottom: 5px
+
+    &.has-post-thumbnail:not(.corpo_thumbnail_disabled) > .entry-header,
+    &.has-post-thumbnail:not(.corpo_thumbnail_disabled) > .entry-excerpt
+      margin-left: 310px
+
+  @media (max-width: 700px)
+    > .post-thumbnail
+      width: auto
+      float: none
+      margin-bottom: 10px
+      text-align: center
+
+      > a > img
+        width: auto
+        max-width: 100%
+
+    &.has-post-thumbnail > .entry-header,
+    &.has-post-thumbnail > .entry-excerpt
+      margin-left: 0
+
+.entry-header
+  .post-edit-link
+    color: $color_theme
+    
+  > .entry-meta
+    margin-bottom: 15px
+
+    > a
+      color: $color_theme
+
+    .updated:not(.published)
+      display: none
+
+    > .edit-link
+      margin-left: 5px
+
+      &:before
+        content: '-'
+        padding-right: 5px
+
+  > .entry-title
+    margin-top: 0
+    margin-bottom: 15px
+    +font-size(20)
+    text-transform: uppercase
+    
+    > a
+      color: #111
+
+      &:hover
+        color: $color_theme
+        text-decoration: none
+
+.entry-excerpt,
+.entry-content
+  border: 1px solid #f5f5f7
+  border-left: none
+  padding: 15px 15px 15px 0
+
+  > .entry-tcs
+    margin-bottom: 10px
+    line-height: 2
+
+    > span
+      padding-right: 10px
+
+      > i
+        margin-right: 10px
+        color: #6d6d6d
+
+      > a
+        color: #6d6d6d
+
+        &:hover
+          color: $color_theme
+
+    > .post-share
+
+      > .share-trigger
+        color: #6d6d6d
+        cursor: pointer
+        position: relative
+      
+        > .sharer-items
+          padding-left: 10px
+          opacity: 0
+          visibility: hidden
+          position: absolute
+          top: 0
+          left: 100%
+          min-width: 100px
+          line-height: 1
+          transition: all 0.25s ease-in-out
+
+          > a
+            padding-right: 5px
+            color: #bdbdbd
+
+            &:hover
+              color: $color_theme
+
+      &:hover
+        > .share-trigger > .sharer-items
+          visibility: visible
+          opacity: 1
+
+  > a
+    margin-top: 15px
+

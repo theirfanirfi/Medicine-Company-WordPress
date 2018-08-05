@@ -1,0 +1,70 @@
+.corpo_icon_box_1
+  min-height: 95px
+  margin-bottom: 20px
+
+  > .icon
+    padding: 5px
+    display: inline-block
+    height: 95px
+    width: 95px
+    border-radius: 50%
+    text-align: center
+    float: left
+    border: 1px solid $color_theme
+    transition: all 0.25s ease-in-out
+
+    i
+      font-size: 35px
+      color: #FFF
+      background: $color_theme
+      height: 83px
+      width: 83px
+      border-radius: 50%
+      +line-height(34)
+
+  > .content
+    margin-left: 115px
+    
+    > .title
+      color: #111
+      font-size: 20px
+      margin-top: 8px
+      margin-bottom: 15px
+
+    > .content
+      +line-height(26)
+      color: #7e7e7e
+
+  > .readmore
+    margin-top: 20px
+    text-align: right
+
+  &:hover
+    .icon
+      background: $color-theme
+
+  &.extra_margin
+    margin-bottom: 75px
+
+  &.right_align
+    text-align: right
+    
+    > .icon
+      float: right
+
+    > .content
+      margin-left: 0
+      margin-right: 115px
+
+  &.top_center
+    > .icon
+      display: block
+      float: none
+      margin: 0 auto 30px auto
+
+    > .content
+      margin: 0
+      text-align: center
+
+    > .readmore
+      text-align: center

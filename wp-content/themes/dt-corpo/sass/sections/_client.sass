@@ -1,0 +1,43 @@
+/* Client */
+.corpo_testimonials_carousel
+  position: relative
+
+  &.navigation_enabled
+    padding-left: 150px
+    padding-right: 150px
+
+    @media (max-width: 1024px)
+      padding-left: 75px
+      padding-right: 75px
+
+    @media (max-width: 768px)
+      padding: 0
+
+
+  > .corpo_testimonials_container
+    overflow: hidden
+
+    .corpo_next_nav,
+    .corpo_prev_nav
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      z-index: 10
+
+    .corpo_next_nav
+      left: auto
+      right: 0
+    @media (max-width: 768px)
+      padding-top: 50px
+
+      .corpo_next_nav,
+      .corpo_prev_nav
+        top: 0
+        transform: none
+
+// Pagination Styles
+.testimonials_carousel_pagination 
+  text-align: center
+  margin-top: 25px
+

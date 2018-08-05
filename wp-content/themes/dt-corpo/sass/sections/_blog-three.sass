@@ -1,0 +1,202 @@
+/* Blog Three */
+.blog-three
+  padding: 50px 0
+
+  .blog-thumb
+    margin-bottom: 20px
+    img
+      width: 100%
+
+  h3
+    color: #111111
+    +font-size(20)
+
+  .blog-content
+    border-right: 1px solid #ededed
+    border-top: 1px solid #ededed
+    border-bottom: 1px solid #ededed
+    padding: 10px 10px 10px 0
+    margin-bottom: 50px
+
+    p
+      margin-bottom: 20px
+      +line-height(26)
+
+.admin
+  margin-bottom: 50px
+
+  .media
+    position: relative
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-right: 30px
+    border-bottom: 1px solid #f5f5f7
+    border-right: 1px solid #f5f5f7
+
+
+    &:before
+      position: absolute
+      content: ''
+      height: 1px
+      width: 84.5%
+      top: 0
+      right: 0
+      background: #f5f5f7
+
+
+  .dt-social-link
+    position: absolute
+    top: 0px
+    right: 30px
+
+    li
+      padding: 0 5px
+      a
+        color: #a9a9a9
+
+        &:hover
+          color: $color_theme
+
+.media-body
+  position: relative
+
+  .media-heading
+    color: #111111
+    +font-size(18)
+    margin-bottom: 10px
+
+  p
+    color: #6d6c6c
+    +font-size(14)
+    +line-height(26)
+
+.comments
+  h3
+    +font-size(32)
+    color: #111111
+    position: relative
+    margin-top: 0
+    padding-bottom: 15px
+    margin-bottom: 50px
+
+    &:after
+      position: absolute
+      content: ''
+      width: 50px
+      height: 3px
+      background: $color_theme
+      left: 0
+      bottom: 0
+
+  .media-list
+    .media
+      .media-inner
+        position: relative
+        padding-top: 20px
+        padding-bottom: 20px
+        padding-right: 30px
+        border-bottom: 1px solid #f5f5f7
+        border-right: 1px solid #f5f5f7
+        margin-bottom: 50px
+
+        &:before
+          position: absolute
+          content: ''
+          height: 1px
+          width: 84.5%
+          top: 0
+          right: 0
+          background: #f5f5f7
+
+
+
+      .comment-date
+        position: absolute
+        padding: 0
+        margin: 0
+        list-style: none
+        top: 0
+        right: 0
+        li
+          display: inline
+          padding-right: 15px
+          position: relative
+          margin-left: 10px
+
+          a
+            color: $color_theme
+            text-decoration: none
+
+          &:first-child
+            position: relative
+            &:after
+              position: absolute
+              content: ''
+              background: $color_theme
+              right: 0
+              top: 1px
+              height: 12px
+              width: 1px
+
+
+    .media-list-child
+      padding-left: 120px
+
+
+.user-comments
+  h3
+    +font-size(32)
+    color: #111111
+    position: relative
+    margin-top: 0
+    padding-bottom: 15px
+    margin-bottom: 50px
+
+    &:after
+      position: absolute
+      content: ''
+      width: 50px
+      height: 3px
+      background: $color_theme
+      left: 0
+      bottom: 0
+
+  .full
+    width: 100%
+    padding: 0 10px
+    position: relative
+
+    label
+      position: absolute
+      background: #FFF
+      padding: 0 10px
+      top: -10px
+      left: 20px
+
+    .dt-massage
+      width: 100%
+      height: 180px
+      padding: 10px
+
+  .half-input
+    position: relative
+    width: 50%
+    padding: 0 10px
+    float: left
+
+    label
+      position: absolute
+      background: #FFF
+      top: -10px
+      left: 20px
+      padding: 0 10px
+
+    .call-back-input
+      width: 100%
+      padding: 10px 0
+
+  .dt-btn
+    margin-left: 10px
+    margin-top: 20px
+    padding: 10px 33px
+    +font-size(14)

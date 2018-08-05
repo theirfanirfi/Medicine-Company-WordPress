@@ -1,0 +1,541 @@
+/*=========  WordPress Essentials  ==========*/
+
+/* Accessibility */
+.screen-reader-text
+  clip: rect(1px, 1px, 1px, 1px)
+  height: 1px
+  overflow: hidden
+  position: absolute !important
+  width: 1px
+  word-wrap: normal !important
+
+.screen-reader-text:focus
+  background-color: #f1f1f1
+  -webkit-border-radius: 3px
+  border-radius: 3px
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6)
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6)
+  clip: auto !important
+  color: #21759b
+  display: block
+  font-size: 14px
+  font-size: 0.875rem
+  font-weight: 700
+  height: auto
+  left: 5px
+  line-height: normal
+  padding: 15px 23px 14px
+  text-decoration: none
+  top: 5px
+  width: auto
+  z-index: 100000 /* Above WP toolbar. */
+
+/* Alignments */
+.alignleft
+  display: inline
+  float: left
+  margin-right: 1.5em
+
+.alignright
+  display: inline
+  float: right
+  margin-left: 1.5em
+
+.aligncenter
+  clear: both
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+/* Clearings */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.entry-footer:before,
+.entry-footer:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.nav-links:before,
+.nav-links:after,
+.pagination:before,
+.pagination:after,
+.comment-author:before,
+.comment-author:after,
+.widget-area:before,
+.widget-area:after,
+.widget:before,
+.widget:after,
+.comment-meta:before,
+.comment-meta:after
+  content: ""
+  display: table
+  table-layout: fixed
+
+.clear:after,
+.entry-content:after,
+.entry-footer:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.nav-links:after,
+.pagination:after,
+.comment-author:after,
+.widget-area:after,
+.widget:after,
+.comment-meta:after
+  clear: both
+
+/* Forms */
+label
+  color: #333
+  display: block
+  font-weight: 800
+  margin-bottom: 0.5em
+
+fieldset
+  margin-bottom: 1em
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea
+  display: block
+  width: 100%
+  border: 1px solid #e5e5e5
+  padding: 10px
+  background-color: transparent
+
+  &:focus
+    border: 1px solid #8a8a8a
+    outline: none
+
+  .transparent-form &
+    border-color: #6f6f6f
+
+    &:focus
+      border-color: #d6d6d6
+
+select,
+  padding: 10px
+  max-width: 100%
+  width: 100%
+  border-radius: 0
+  -webkit-appearance: none
+  border: 1px solid #e5e5e5
+  background-color: transparent
+
+  &:focus
+    border: 1px solid #8a8a8a
+    outline: none
+    
+  .transparent-form &
+    border-color: #6f6f6f
+
+    &:focus
+      border-color: #d6d6d6
+
+input[type="radio"],
+input[type="checkbox"]
+  margin-right: 0.5em
+
+input[type="radio"] + label,
+input[type="checkbox"] + label
+  font-weight: 400
+
+button,
+input[type="button"],
+input[type="submit"]
+   border: 2px solid $color_theme
+   color: $color_theme
+   background-color: transparent
+   cursor: pointer
+   padding: 8px 50px
+   display: inline-block
+   font-weight: 700
+   position: relative
+   transition: all 0.3s
+   overflow: hidden
+   text-decoration: none
+
+input + button,
+input + input[type="button"],
+input + input[type="submit"]
+  padding: 0.75em 2em
+
+button.secondary,
+input[type="reset"],
+input[type="button"].secondary,
+input[type="reset"].secondary,
+input[type="submit"].secondary
+  background-color: #ddd
+  color: #222
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus
+  background: $color_theme
+  color: #fff !important
+  outline: none
+
+button.secondary:hover,
+button.secondary:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="button"].secondary:hover,
+input[type="button"].secondary:focus,
+input[type="reset"].secondary:hover,
+input[type="reset"].secondary:focus,
+input[type="submit"].secondary:hover,
+input[type="submit"].secondary:focus
+  background: #bbb
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder
+  color: #333
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif
+
+:-moz-placeholder
+  color: #333
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif
+
+::-moz-placeholder
+  color: #333
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif
+  opacity: 1
+  /* Since FF19 lowers the opacity of the placeholder by default */
+
+:-ms-input-placeholder
+  color: #333
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif
+
+/* Tables */
+table
+  border-collapse: collapse
+  margin: 0 0 1.5em
+  width: 100%
+
+thead th
+  border-bottom: 2px solid #bbb
+  padding-bottom: 0.5em
+
+th
+  padding: 0.4em
+  text-align: left
+
+tr
+  border-bottom: 1px solid #eee
+
+td
+  padding: 0.4em
+
+th:first-child,
+td:first-child
+  padding-left: 0
+
+th:last-child,
+td:last-child
+  padding-right: 0
+
+/* Search */
+.search-form
+  position: relative
+
+.search-form .search-submit
+  bottom: 3px
+  padding: 0.5em 1em
+  position: absolute
+  right: 3px
+  top: 3px
+
+.search-form .search-submit .icon
+  height: 24px
+  top: -2px
+  width: 24px
+
+/* Calendar widget */
+.widget_calendar th,
+.widget_calendar td
+  text-align: center
+
+.widget_calendar tfoot td
+  border: 0
+
+/* Media */
+video
+  height: auto /* Make sure images are scaled correctly. */
+  max-width: 100% /* Adhere to container width. */
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley
+  border: none
+  margin-bottom: 0
+  margin-top: 0
+  padding: 0
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object
+  margin-bottom: 1.5em
+  max-width: 100%
+
+.wp-caption,
+.gallery-caption
+  color: #666
+  font-size: 13px
+  font-size: 0.8125rem
+  font-style: italic
+  margin-bottom: 1.5em
+  max-width: 100%
+
+.wp-caption img[class*="wp-image-"]
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+.wp-caption .wp-caption-text
+  margin: 0.8075em 0
+
+/* Media Elements */
+.mejs-container
+  margin-bottom: 1.5em
+
+/* Audio Player */
+.mejs-controls a.mejs-horizontal-volume-slider,
+.mejs-controls a.mejs-horizontal-volume-slider:focus,
+.mejs-controls a.mejs-horizontal-volume-slider:hover
+  background: transparent
+  border: 0
+
+/* Playlist Color Overrides: Light */
+.site-content .wp-playlist-light
+  border-color: #eee
+  color: #222
+
+.site-content .wp-playlist-light .wp-playlist-current-item .wp-playlist-item-album
+  color: #333
+
+.site-content .wp-playlist-light .wp-playlist-current-item .wp-playlist-item-artist
+  color: #767676
+
+.site-content .wp-playlist-light .wp-playlist-item
+  border-bottom: 1px dotted #eee
+  -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out
+
+.site-content .wp-playlist-light .wp-playlist-item:hover,
+.site-content .wp-playlist-light .wp-playlist-item:focus
+  border-bottom-color: rgba(0, 0, 0, 0)
+  background-color: #767676
+  color: #fff
+
+.site-content .wp-playlist-light a.wp-playlist-caption:hover,
+.site-content .wp-playlist-light .wp-playlist-item:hover a,
+.site-content .wp-playlist-light .wp-playlist-item:focus a
+  color: #fff
+
+/* Playlist Color Overrides: Dark */
+.site-content .wp-playlist-dark
+  background: #222
+  border-color: #333
+
+.site-content .wp-playlist-dark .mejs-container .mejs-controls
+  background-color: #333
+
+.site-content .wp-playlist-dark .wp-playlist-caption
+  color: #fff
+
+.site-content .wp-playlist-dark .wp-playlist-current-item .wp-playlist-item-album
+  color: #eee
+
+.site-content .wp-playlist-dark .wp-playlist-current-item .wp-playlist-item-artist
+  color: #aaa
+
+.site-content .wp-playlist-dark .wp-playlist-playing
+  background-color: #333
+
+.site-content .wp-playlist-dark .wp-playlist-item
+  border-bottom: 1px dotted #555
+  -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out
+
+.site-content .wp-playlist-dark .wp-playlist-item:hover,
+.site-content .wp-playlist-dark .wp-playlist-item:focus
+  border-bottom-color: rgba(0, 0, 0, 0)
+  background-color: #aaa
+  color: #222
+
+.site-content .wp-playlist-dark a.wp-playlist-caption:hover,
+.site-content .wp-playlist-dark .wp-playlist-item:hover a,
+.site-content .wp-playlist-dark .wp-playlist-item:focus a
+  color: #222
+
+/* Playlist Style Overrides */
+.site-content .wp-playlist
+  padding: 0.625em 0.625em 0.3125em
+
+.site-content .wp-playlist-current-item .wp-playlist-item-title
+  font-weight: 700
+
+.site-content .wp-playlist-current-item .wp-playlist-item-album
+  font-style: normal
+
+.site-content .wp-playlist-current-item .wp-playlist-item-artist
+  font-size: 10px
+  font-size: 0.625rem
+  font-weight: 800
+  letter-spacing: 0.1818em
+  text-transform: uppercase
+
+.site-content .wp-playlist-item
+  padding: 0 0.3125em
+  cursor: pointer
+
+.site-content .wp-playlist-item:last-of-type
+  border-bottom: none
+
+.site-content .wp-playlist-item a
+  padding: 0.3125em 0
+  border-bottom: none
+
+.site-content .wp-playlist-item a,
+.site-content .wp-playlist-item a:focus,
+.site-content .wp-playlist-item a:hover
+  -webkit-box-shadow: none
+  box-shadow: none
+  background: transparent
+
+.site-content .wp-playlist-item-length
+  top: 5px
+
+.sticky > i
+  color: inherit
+
+  
+/* Galleries */
+
+.gallery-item
+  display: inline-block
+  text-align: left
+  vertical-align: top
+  margin: 0 0 1.5em
+  padding: 0 1em 0 0
+  width: 50%
+
+.gallery-columns-1 .gallery-item
+  width: 100%
+
+
+.gallery-columns-2 .gallery-item
+  max-width: 50%
+
+.gallery-item a,
+.gallery-item a:hover,
+.gallery-item a:focus
+  -webkit-box-shadow: none
+  box-shadow: none
+  background: none
+  display: inline-block
+  max-width: 100%
+
+
+.gallery-item a img
+  display: block
+  -webkit-transition: -webkit-filter 0.2s ease-in
+  transition: -webkit-filter 0.2s ease-in
+  transition: filter 0.2s ease-in
+  transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+
+
+.gallery-item a:hover img,
+.gallery-item a:focus img
+  -webkit-filter: opacity(60%)
+  filter: opacity(60%)
+
+
+.gallery-caption
+  display: block
+  text-align: left
+  padding: 0 10px 0 0
+  margin-bottom: 0
+
+@media screen and (min-width: 480px)
+
+  /* Gallery Columns */
+
+  .gallery-item
+    max-width: 25%
+  
+  .gallery-columns-1 .gallery-item
+    max-width: 100%
+  
+  .gallery-columns-2 .gallery-item
+    max-width: 50%
+
+  .gallery-columns-3 .gallery-item
+    max-width: 33.33%
+  
+  .gallery-columns-4 .gallery-item
+    max-width: 25%
+  
+@media screen and (min-width: 720px)
+  .gallery-columns-5 .gallery-item
+    max-width: 20%
+  
+  .gallery-columns-6 .gallery-item
+    max-width: 16.66%
+
+  .gallery-columns-7 .gallery-item
+    max-width: 14.28%
+
+  .gallery-columns-8 .gallery-item
+    max-width: 12.5%
+  
+  .gallery-columns-9 .gallery-item
+    max-width: 11.11%
+  
+/* Visual Composer Hacks */
+@media( min-width: 768px )
+  .overuse-image,
+  .wpb_content_element.overuse-image
+    margin-bottom: 0
+
+  .overuse-image figure,
+  .overuse-image img,
+  .overuse-image .vc_single_image-wrapper
+    max-width: inherit !important
+
+.vc_row.transparent_row
+  color: #d8d8d8
+
+.wpb_single_image.wpb_content_element
+  margin-bottom: 0
+
+.vc_row.ungly-space .vc_column-inner
+  padding-top: 0 !important

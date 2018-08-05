@@ -1,0 +1,349 @@
+@media (min-width: 768px)
+  .transparent-menu.top_bar_enabled
+    margin-top: 50px
+
+.site-header
+  
+  .corpo_bs_navbar
+    margin-bottom: 0
+    background-color: #FFF
+
+    &.navbar-fixed-top
+      animation: nav_fixed_pos 0.35s
+
+    .navbar-brand
+      padding: 8px 15px
+
+    .transparent-logo
+        display: none
+
+    .normal-logo
+      display: block
+      height: 100%
+      width: auto
+
+    .navbar-toggle
+      border-radius: 0
+      border-color: $color_theme
+
+      .icon-bar
+        background-color: $color_theme
+
+      &:focus,
+      &:hover
+        background-color: $color_theme
+        border-color: $color_theme
+
+        .icon-bar
+          background-color: #FFF !important
+
+    @media (max-width: 767px)
+      .nav
+        > li
+          > a
+            font-weight: 700
+            text-transform: uppercase
+
+        li > a
+          border-bottom: 1px solid #f5f5f7
+
+        li.active > a,
+        li.active > a,
+        li.open > a,
+        li:hover > a,
+        li > a:hover,
+        li > a:focus,
+        .dropdown-menu > li:hover > a,
+        .dropdown-menu > li:focus > a,
+        .dropdown-menu > .active > a,
+        .dropdown-menu > .active > a:hover
+          color: #fff
+          background-color: $color_theme
+          border-color: $color_theme
+
+        li:hover > .dropdown-menu
+            display: block
+            position: static
+            float: none
+            width: auto
+            margin-top: 0
+            background-color: transparent
+            border: 0
+            -webkit-box-shadow: none
+            box-shadow: none
+
+        li > .dropdown-menu
+          padding: 10px
+
+          > li > a
+            padding: 10px 15px
+            color: #111
+  
+  .corpo_top_bar
+    background-color: #111
+
+    .top_bar_nav
+      padding-left: 0
+      margin-bottom: 0
+
+      > li
+        display: inline-block
+        padding: 15px 10px
+        color: #fff
+
+        > i
+          padding-right: 10px
+
+        > a
+          color: #fff
+
+          > i
+            padding-right: 10px
+
+    #menu-social-networks
+      > li
+
+        > a
+          text-decoration: none
+
+          &:hover
+            color: $color_theme
+
+          > i
+            padding-right: 0
+
+    @media (max-width: 991px)
+      padding-top: 10px
+      padding-bottom: 10px
+      
+      .top_bar_nav
+        float: none !important
+
+        > li
+          padding: 5px 10px
+
+  @media (min-width: 768px)
+    .transparent-menu &
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      z-index: 1030
+
+      .corpo_bs_navbar
+        background-color: transparent
+        box-shadow: none
+        border-bottom: 1px solid rgba(255,255,255,0.2)
+        
+        &.navbar-fixed-top
+          background-color: #FFF
+          box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.2)
+          border-bottom: none
+
+    .admin-bar &
+      top: 32px
+
+    .corpo_bs_navbar
+      border-radius: 0
+      border: none
+      margin-bottom: 0
+      background-color: #FFF
+      box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.2)
+
+      &.navbar-fixed-top
+        animation: nav_fixed_pos 0.35s
+        .admin-bar &
+          top: 32px
+
+        .navbar-collapse
+          padding-left: 15px
+          padding-right: 15px
+    
+      .navbar-brand
+        height: 90px
+        padding: 20px 15px
+
+      .transparent-logo
+        display: none
+
+      .normal-logo
+        display: block
+      
+      // For transparent menu
+      .transparent-menu &
+
+        .transparent-logo
+          display: block
+
+        .normal-logo
+          display: none
+
+        &.navbar-fixed-top
+
+          .transparent-logo 
+            display: none
+
+          .normal-logo
+            display: block
+
+
+      .nav
+        float: right
+
+        > li
+          > a
+            padding: 35px 15px
+            font-weight: 700
+            text-transform: uppercase
+
+          &.active > a,
+          &.open > a,
+          &:hover > a,
+          &.active > a:hover,
+          > a:hover
+            color: $color_theme
+            background-color: transparent
+
+        .dropdown-menu
+          border-radius: 0
+          border: none
+          padding: 0
+          margin: 0
+          display: block
+          opacity: 0
+          visibility: hidden
+          transform: translateY(30px)
+          transition: all 0.25s ease-in-out
+
+          > li
+            > a
+              display: block
+              padding: 10px 30px
+              border-bottom: 1px solid #f5f5f7
+
+            &.active > a,
+            > a:hover,
+            > a:focus,
+            > a:hover
+              background-color: $color_theme
+              color: #fff
+              border-color: $color_theme
+
+            &:last-child > a
+              border-bottom: none
+
+
+          .dropdown-menu
+            left: 100%
+            top: 5px
+
+        li:hover > .dropdown-menu
+          visibility: visible
+          opacity: 1
+          transform: translateY(0)
+
+      .transparent-menu &:not(.navbar-fixed-top)
+        .nav
+          > li
+            > a
+              color: #fff
+
+            &.active > a,
+            &:hover > a,
+            &.active > a:hover,
+            > a:hover
+              color: $color_theme
+              background-color: transparent
+
+// Nav search
+#menu-search-form
+  > .search-form
+    position: absolute
+    top: 100%
+    right: 0
+    width: 250px
+    opacity: 0
+    visibility: hidden
+    transition: all 0.25s ease-in-out
+    z-index: 1000
+
+    input
+      background-color: #FFF
+
+    .search-submit
+      border: none
+      padding: 0
+      margin-right: 10px
+
+      &:hover,
+      &:focus
+        background-color: transparent
+        color: $color_theme
+
+    > label
+      margin: 0
+
+  &.search-visible
+    > .search-form
+      opacity: 1
+      visibility: visible
+
+  @media (max-width: 767px)
+    .search-form
+      position: relative
+      visibility: visible
+      opacity: 1
+      width: 100%
+      margin-top: 15px
+      padding-left: 15px
+      padding-right: 15px
+
+      .search-submit
+        margin-right: 25px
+
+    > a
+      display: none
+
+// Nav Animation keyframes
+@keyframes nav_fixed_pos
+    0%
+      opacity: 0
+      transform: translateY(-100%)
+
+    100%
+      opacity: 1
+      transform: translateY(0)
+
+
+/* Back To Top */
+.return-to-top
+  position: fixed
+  bottom: 50px
+  right: 50px
+  background: $color_theme
+  width: 40px
+  height: 40px
+  z-index: 1000
+  text-decoration: none
+  opacity: 0
+  transition: all 0.3s ease
+
+  &.visible
+    opacity: 1
+
+  i
+    color: #fff
+    margin: 0
+    position: relative
+    left: 11px
+    top: 9px
+    font-size: 19px
+    transition: all 0.3s ease
+
+  &:hover
+    background: rgba(0, 0, 0, 0.9)
+
+    i
+      color: #fff
+      top: 5px
+

@@ -1,0 +1,99 @@
+/* Latest News */
+
+#letest-news
+  padding: 50px 0
+
+  .news-heading
+    text-align: center
+
+  .section-title
+    margin-bottom: 50px
+
+    &:after
+      left: 41%
+
+  .dt-btn
+    padding: 6px 30px
+    +font-size(14)
+
+  .btn-skew
+    &:after
+      height: 62px
+
+    &:hover
+      &:after
+        height: 120px
+
+  .news
+    border-bottom: 1px solid #e5e5e5
+    border-left: 1px solid #e5e5e5
+    padding-bottom: 15px
+    position: relative
+
+    .news-details
+      width: 90px
+      position: absolute
+      .details
+        text-align: right
+        border-bottom: 1px solid #e5e5e5
+        padding-bottom: 10px
+
+        &:last-child
+          border-bottom: none
+
+        p
+          font-size: 36px
+          color: #111
+          margin-bottom: 0
+
+        span
+          color: #7e7e7e
+          +font-size(14)
+
+        a
+          font-size: 30px
+          color: #111
+          display: block
+
+    .news-thumb
+      padding-left: 110px
+      img
+        width: 100%
+
+  .news-caption
+    margin-left: 110px
+    border-right: 1px solid #e5e5e5
+    border-bottom: 1px solid #e5e5e5
+    padding: 20px 0
+
+    .news-title
+      +font-size(20)
+      margin-top: 0
+
+      a
+        color: #111
+        transition: all 0.3s ease-in-out
+
+        &:hover
+          color: $color-theme
+
+    p
+      +line-height(26)
+      margin-bottom: 40px
+
+
+.latest-news-two
+  .news-heading
+    h1
+      color: #111
+      font-weight: 700
+      margin-top: 0
+
+      span
+        font-weight: 400
+        margin-top: 0
+
+    p
+      color: #6d6c6c
+      margin-bottom: 40px
+      +line-height(26)

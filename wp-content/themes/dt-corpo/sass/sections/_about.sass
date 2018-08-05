@@ -1,0 +1,35 @@
+// New Skills
+.corpo_skill_bars
+  margin-bottom: 30px
+  
+  > .skill-item
+    position: relative
+    background-color: #f5f4f4
+    height: 30px
+    margin-top: 30px
+
+    > .skill-value
+      position: absolute
+      top: -20px
+      right: 0
+      line-height: 1
+
+      &:after
+        content: "%"
+
+    > .skill-label
+      color: #fff
+      font-weight: 600
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      margin-left: 20px
+      z-index: 2
+
+    > .skill-progress
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      z-index: 1
+      background-color: $color_theme

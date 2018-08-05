@@ -1,0 +1,162 @@
+.corpo_icon_box_3
+  margin-bottom: 50px
+  text-align: left
+
+  > .number
+    +font-size(50)
+    color: #eeeeee
+    margin-bottom: 0
+    margin-top: 10px
+    display: inline-block
+    float: left
+    margin-right: 20px
+
+  &.has_num_2x
+    > .number
+      margin-right: 10px
+
+  > .icon
+    display: block
+    float: left
+    height: 88px
+    width: 88px
+    border-radius: 50%
+    position: relative
+    text-align: center
+    background-color: rgba($color_theme, 0.2)
+
+    &:after
+      content: ''
+      position: absolute
+      height: 76px
+      width: 76px
+      left: 6px
+      top: 6px
+      border-radius: 50%
+      background-color: rgba($color_theme, 0.4)
+
+    > i
+      font-size: 30px
+      color: #FFF
+      position: absolute
+      height: 64px
+      width: 64px
+      top: 12px
+      left: 12px
+      border-radius: 50%
+      z-index: 100
+      +line-height(30)
+      background-color: $color_theme
+  
+  > .content
+    margin-left: 108px
+
+  > .readmore
+    margin-top: 20px
+    text-align: right
+
+  &.has_num
+    > .content
+      margin-left: 160px
+
+  &.has_num_2x
+    > .content
+      margin-left: 175px
+
+  &.right_align
+    text-align: right
+
+    > .number
+      float: right
+      margin-right: 0
+      margin-left: 20px
+
+    &.has_num_2x
+      > .number
+        margin-right: 0
+        margin-left: 10px
+
+    > .icon
+      float: right
+
+    > .content
+      margin-left: 0
+      margin-right: 108px
+
+    &.has_num
+      > .content
+        margin-left: 0
+        margin-right: 160px
+
+    &.has_num_2x
+      > .content
+        margin-left: 0
+        margin-right: 175px
+  
+  &.top_center
+    text-align: center
+
+    > .icon
+      float: none
+      margin: 0 auto
+
+    > .content
+      margin-left: 0
+
+    > .readmore
+      text-align: center
+      
+  // Make Colors
+  &.purple > .icon
+    background-color: rgba(199, 68, 253, 0.2)
+
+    &:after
+      background-color: rgba(199, 68, 253, 0.4)
+
+    > i
+      background-color: rgb(199, 68, 253)
+
+  &.green > .icon
+    background-color: rgba(46, 184, 81, 0.2)
+
+    &:after
+      background-color: rgba(46, 184, 81, 0.4)
+
+    > i
+      background-color: rgb(46, 184, 81)
+
+  &.orange > .icon
+    background-color: rgba(240, 90, 40, 0.2)
+
+    &:after
+      background-color: rgba(240, 90, 40, 0.4)
+
+    > i
+      background-color: rgb(240, 90, 40)
+
+  &.red > .icon
+    background-color: rgba(231, 76, 60, 0.2)
+
+    &:after
+      background-color: rgba(231, 76, 60, 0.4)
+
+    > i
+      background-color: rgb(231, 76, 60)
+
+  &.sky-blue > .icon
+    background-color: rgba(52, 152, 219, 0.2)
+
+    &:after
+      background-color: rgba(52, 152, 219, 0.4)
+
+    > i
+      background-color: rgb(52, 152, 219)
+  
+  &.yellow > .icon
+    background-color: rgba(241, 196, 15, 0.2)
+
+    &:after
+      background-color: rgba(241, 196, 15, 0.4)
+
+    > i
+      background-color: rgb(241, 196, 15)

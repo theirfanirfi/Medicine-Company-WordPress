@@ -1,0 +1,92 @@
+.page-links
+	margin-top: 20px
+	margin-bottom: 15px
+	
+	> span,
+	> a
+		display: inline-block
+		border: 1px solid #9a9a9a
+		padding: 5px 10px
+		text-decoration: none
+
+	> span,
+	> a:hover
+		background-color: #9a9a9a
+		color: #fff
+
+.pagination,
+.comments-pagination
+	border-top: 1px solid #eee
+	font-size: 14px
+	font-weight: 800
+	padding: 20px 0
+	text-align: center
+	display: block
+
+.page-numbers
+	display: inline-block
+	padding: 7px 12px
+	border: 1px solid #e5e5e5
+	margin: 0 5px
+	color: #111
+	
+	&.current,
+	&:hover
+		background-color: $color_theme
+		border-color: $color_theme
+		color: #FFF
+		text-decoration: none
+
+.prev.page-numbers
+	float: left
+	padding: 0
+	border: none
+
+	&:hover
+		background-color: transparent !important
+
+.next.page-numbers
+	float: right
+	padding: 0
+	border: none
+
+	&:hover
+		background-color: transparent !important
+
+.post-navigation
+	margin-top: 50px
+
+	.nav-links
+		a:hover
+			text-decoration: none
+
+		> .nav-previous,
+		> .nav-next
+			width: 50%
+			position: relative
+
+		.nav-title
+			font-weight: 700
+			color: #111
+			+font-size(18)
+
+		> .nav-previous
+			float: left
+			padding-left: 70px
+			padding-top: 7px
+
+			.corpo_prev_nav
+				position: absolute
+				top: 0
+				left: 0
+
+		> .nav-next
+			float: right
+			text-align: right
+			padding-right: 70px
+			padding-top: 7px
+
+			.corpo_next_nav
+				position: absolute
+				top: 0
+				right: 0

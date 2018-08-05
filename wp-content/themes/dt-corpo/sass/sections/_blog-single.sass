@@ -1,0 +1,213 @@
+// Single Post
+.corpo_single_post
+
+	> .post-thumbnail
+		text-align: center
+		margin-bottom: 20px
+
+		> img
+			max-width: 100%
+			height: auto
+	
+	> .entry-header
+		margin-bottom: 20px
+
+		> .entry-title
+			margin-top: 0
+			margin-bottom: 0
+			color: #111
+			+font-size(26)
+
+	> .entry-content
+		img
+			max-width: 100%
+			height: auto
+			
+		> .entry-tcs
+			margin-bottom: 30px
+
+	@media (max-width: 768px)
+		> .entry-content
+			padding: 0
+			border: none
+
+// Single Page
+.corpo_single_page
+
+	> .entry-header
+		margin-bottom: 30px
+
+		> .entry-title
+			+font-size(30)
+	> .entry-content
+		img
+			max-width: 100%
+			height: auto
+			
+		border: none
+		padding: 0
+
+// Author box
+.corpo_post_author_box
+	border-right: 1px solid #f5f5f7
+	border-bottom: 1px solid #f5f5f7
+	overflow: hidden
+	position: relative
+	padding: 10px 25px 10px 0
+	margin-top: 50px
+	margin-bottom: 50px
+	+clearfix()
+
+	&:before
+		content: '';
+		position: absolute
+		width: 100%
+		height: 1px
+		background-color: #f5f5f7
+		top: 0
+		left: 125px
+
+	> .profile_image
+		width: 100px
+		height: 100px
+		float: left
+
+		> img
+			width: 100%
+			height: 100%
+	
+	> .profile_content
+		padding-left: 125px
+
+		> .profile_name
+			margin-top: 0
+			text-transform: uppercase
+			color: #111
+
+		> .profile_bio
+			margin-bottom: 10px
+
+		> .dt-social-link
+			position: absolute
+			top: 10px
+			right: 25px
+			margin: 0
+	
+	@media (max-width: 600px)
+
+		&:before
+			left: 70px
+
+		> .profile_image
+			width: 60px
+			height: 60px
+			margin-right: 10px
+			margin-bottom: 0px
+
+		> .profile_content
+			padding-left: 0
+
+			> .dt-social-link
+				position: static
+
+// Comments Section
+#comments
+	margin-top: 50px
+
+	.comments-title
+		+font-size(20)
+		text-transform: uppercase
+		color: #111
+		margin-bottom: 25px
+
+	.comment-list,
+		list-style: none
+		margin: 0
+
+	.comment-list .children
+		list-style: none
+		padding-left: 20px
+
+	.comment-list li:before
+		display: none
+
+	.comment-body
+		margin-left: 65px
+
+	.comment-author
+		+font-size(16)
+		margin-bottom: 10px
+		position: relative
+		z-index: 2
+
+	.comment-author .avatar
+		height: 50px
+		left: -65px
+		position: absolute
+		width: 50px
+
+	.comment-author .says
+		display: none
+
+	.comment-meta
+		margin-bottom: 1.5em
+
+	.comment-metadata
+		color: #767676
+		+font-size(10)
+		font-weight: 800
+		letter-spacing: 0.1818em
+		text-transform: uppercase
+
+	.comment-metadata a
+		color: #767676
+
+	.comment-metadata a.comment-edit-link
+		color: #222
+		margin-left: 1em
+
+	.comment-body
+		color: #333
+		margin-bottom: 30px
+
+		img
+			max-width: 100%
+			height: auto
+
+	.comment-reply-link
+		font-weight: 800
+		position: relative
+
+	.comment-reply-link .icon
+		color: #222
+		left: -2em
+		height: 1em
+		position: absolute
+		top: 0
+		width: 1em
+
+	.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar
+		border: 1px solid #333
+		padding: 2px
+
+	.no-comments,
+	.comment-awaiting-moderation
+		color: #767676
+		font-style: italic
+
+	.form-submit
+		text-align: right
+
+	.comments-pagination
+		margin-bottom: 30px
+		margin-top: 30px
+
+// Comment form
+#respond
+
+	#reply-title
+		+font-size(20)
+		text-transform: uppercase
+		color: #111
+		margin-top: 0
+		margin-bottom: 10px

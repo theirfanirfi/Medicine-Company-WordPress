@@ -1,0 +1,41 @@
+.intro-banner
+  padding: 100px 0
+  text-align: center
+  background-color: #252525
+  position: relative
+
+  h1
+    color: #FFF
+    text-transform: uppercase
+    margin-bottom: 20px
+    font-weight: 700
+    +font-size(45)
+
+    span
+      color: $color_theme
+
+  p
+    color: #FFF
+    font-weight: 300
+    +font-size(20)
+    text-transform: uppercase
+    margin-bottom: 50px
+    span
+      color: #f89406
+
+  .dt-intro-btn
+    display: inline-block
+    text-decoration: none
+    color: #FFF
+    +font-size(16)
+    padding: 10px 20px
+    border: 1px solid $color_theme
+    transition: all 0.3s ease-in-out
+    cursor: pointer
+
+    i
+      padding-right: 10px
+
+    &:hover
+      background: $color_theme
+

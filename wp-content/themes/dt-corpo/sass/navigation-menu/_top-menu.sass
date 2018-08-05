@@ -1,0 +1,37 @@
+#top-menu
+  padding: 13px 0
+  background: #111111
+
+  .top-contact-info
+    margin: 0
+    padding: 0
+    list-style: none
+
+    li
+      display: inline-block
+      margin-right: 15px
+      +font-size(14)
+      color: #FFF
+      +line-height(26)
+
+      &:last-child
+        margin-right: 0
+
+      > a
+        color: #FFF
+        transition: color 0.15s ease-in-out
+
+        &:hover
+          color: $color_theme
+          text-decoration: none
+
+        &[href="#"]:hover,
+        &[href="#"]:focus
+          text-decoration: none
+          color: inherit
+
+      i
+        padding-right: 10px
+
+  .dt-social-link
+    float: right

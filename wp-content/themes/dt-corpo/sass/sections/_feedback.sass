@@ -1,0 +1,231 @@
+.corpo_testimonial_1
+  overflow: hidden
+
+  > .client-thumb
+    float: left
+    width: 100px
+    text-align: center
+
+    > .client-avatar
+      border: 1px solid $color_theme
+      border-radius: 50%
+      padding: 8px
+
+      > .image
+        position: relative
+        height: 83px
+        width: 83px
+        border-radius: 50%
+        overflow: hidden
+
+        > img
+          width: 100%
+          height: auto
+
+    > h4
+      font-size: 16px
+
+  > .content
+    background-color: $color_theme
+    padding: 30px
+    position: relative
+    margin-left: 120px
+    color: #fff
+
+    &:before
+      position: absolute
+      content: ''
+      width: 0
+      height: 0
+      border-top: 10px solid transparent
+      border-right: 12px solid $color_theme
+      border-bottom: 10px solid transparent
+      left: -12px
+      top: 40px
+
+  &.transparent,
+  .transparent-testimonials &
+    > .client-thumb
+      > h4
+        color: #fff
+        margin-bottom: 0
+
+      > .client-avatar
+        border-color: #fff !important
+
+    > .content
+      background-color: rgba( 255, 255, 255, 0.3) !important
+
+      &:before
+        border-right-color: rgba( 255, 255, 255, 0.3)
+
+  @media (max-width: 767px)
+    > .client-thumb
+      float: none
+      margin: 0 auto 30px auto
+
+    > .content
+      margin-left: 0
+
+      &:before
+        position: absolute
+        content: ''
+        width: 0
+        height: 0
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid $color_theme;
+        left: 50%
+        top: -25px
+        transform: translateX(-50%);
+
+    &.transparent,
+    .transparent-testimonials &
+      > .content:before
+        border-bottom-color: rgba( 255, 255, 255, 0.3)
+        border-right-color: transparent
+
+// Style 2
+.corpo_testimonial_2
+  overflow: hidden
+
+  > .client-thumb
+    text-align: center
+
+    > .client-avatar
+      border: 1px solid $color_theme
+      border-radius: 50%
+      padding: 8px
+      width: 100px
+      height: 100px
+      margin: 0 auto
+
+      > .image
+        position: relative
+        height: 83px
+        width: 83px
+        border-radius: 50%
+        overflow: hidden
+
+        > img
+          width: 100%
+          height: auto
+
+    > h4
+      font-size: 16px
+
+  > .content
+    background-color: $color_theme
+    padding: 30px
+    margin-bottom: 20px
+    position: relative
+    color: #fff
+
+    &:after
+      position: absolute
+      content: ''
+      width: 0
+      height: 0
+      border-left: 15px solid transparent
+      border-right: 15px solid transparent
+      border-top: 15px solid $color_theme
+      bottom: -15px
+      left: 50%
+      transform: translateX(-50%)
+
+  &.transparent,
+  .transparent-testimonials &
+    > .client-thumb
+      > h4
+        color: #fff
+
+      > .client-avatar
+        border-color: #fff !important
+
+    > .content
+      background-color: rgba( 255, 255, 255, 0.3) !important
+
+      &:after
+        border-top-color: rgba( 255, 255, 255, 0.3)
+
+// Style 3
+.corpo_testimonial_3
+  +clearfix()
+
+  > .client-comments
+    padding: 35px
+    background-color: #f5f5f7
+    margin-bottom: 20px
+    position: relative
+    line-height: 26px
+
+    &:after
+      position: absolute
+      content: ''
+      width: 0
+      height: 0
+      border-top: 16px solid #e5e5e5
+      border-left: 26px solid transparent
+      bottom: -16px
+      left: 0
+
+  > .client-details
+    > .client-avatar
+      float: left
+      border: 1px solid #e3e3e3
+      padding: 5px
+
+      > .image
+        height: 86px
+        width: 86px
+        overflow: hidden
+
+        > img
+          width: 100%
+          height: auto
+
+    > .details
+      padding-left: 110px
+
+      > h4
+        color: $color_theme
+        font-size: 18px
+
+      > p
+        color: #6d6c6c
+
+      > .dt-social-link
+        display: inline-block
+        margin: 0 -3px
+
+        > li
+          padding: 0 5px
+
+          > a
+            color: #c6c6c6
+
+            &:hover
+              color: $color_theme
+  
+  &.transparent,
+  .transparent-testimonials &
+    > .client-comments
+      background-color: rgba( 255, 255, 255, 0.3)
+      color: #fff
+
+      &:after
+        border-top-color: rgba( 255, 255, 255, 0.2)
+
+    > .client-details
+      > .client-avatar
+        border-color: #fff
+
+      > .details
+        > p
+          color: #fff
+
+        > .dt-social-link > li > a
+          color: #fff
+
+          &:hover
+            color: $color_theme

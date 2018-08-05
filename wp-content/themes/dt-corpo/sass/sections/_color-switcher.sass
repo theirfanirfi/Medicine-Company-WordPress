@@ -1,0 +1,131 @@
+#color-switcher
+  position: fixed
+  top: 155px
+  right: -250px
+  width: 280px
+  z-index: 9999!important
+  overflow: hidden
+  display: block
+  font-size: 12px
+  font-weight: normal
+  line-height: 18px
+  letter-spacing: normal
+  color: #444
+
+  .color-switcher-button
+    float: left
+    width: 30px
+    height: 40px
+    margin-top: 30px
+
+    a
+      display: block
+      width: 30px
+      height: 40px
+      line-height: 40px
+      text-align: center
+      font-size: 18px
+      background-color: $color-theme
+      -webkit-border-top-left-radius: 5px
+      -webkit-border-bottom-left-radius: 5px
+      -moz-border-radius-topleft: 5px
+      -moz-border-radius-bottomleft: 5px
+      border-top-left-radius: 5px
+      border-bottom-left-radius: 5px
+      color: #FFF
+      text-decoration: none
+      transition: all 0.3s ease
+
+      &:hover
+        color: #000
+
+
+  .color-switcher-bar
+    float: right
+    width: 250px
+    height: 100%
+    padding: 30px 20px
+    background: #e8e8e8
+    -webkit-border-top-left-radius: 5px
+    -webkit-border-bottom-left-radius: 5px
+    -moz-border-radius-topleft: 5px
+    -moz-border-radius-bottomleft: 5px
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+
+
+  h4
+    font-size: 16px
+    font-weight: normal
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: #000
+    margin: 1.4em 0 1em 0
+    padding: 0
+
+    &:first-child
+      margin-top: 0
+
+
+  .button-buy-template
+    background-color: #000!important
+    color: #fff!important
+
+    &:hover
+      background-color: #27ae60!important
+      color: #fff!important
+
+
+  .switcher-list
+    width: 210px
+    overflow: hidden
+    margin: 0
+    padding: 0
+    list-style: none
+
+
+    li
+      float: left
+      margin: 0 5px 10px 0
+
+      &.last
+        margin-right: 0
+
+
+      a
+        display: block
+        width: 40px
+        height: 40px
+        border: 1px solid #fff
+        text-indent: -9999px
+        text-decoration: none
+        transition: all 0.3s ease
+
+        &:hover
+          border: 1px solid #000
+
+
+  .switcher-text-list
+    margin-left: 0
+    margin-right: 0
+    padding-left: 0
+    padding-right: 0
+    list-style-type: none
+
+    a
+      color: #000
+      text-decoration: none
+
+      &:hover
+       color: #27ae60
+
+
+      i
+        width: 15px
+        display: inline-block
+        text-align: center
+
+
+@media screen and (max-width: 800px)
+  #color-switcher
+    display: none

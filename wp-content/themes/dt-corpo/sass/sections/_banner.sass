@@ -1,0 +1,171 @@
+/* Banner */
+.corpo_slider
+  
+  > .corpo_slider_container
+    position: relative
+    overflow: hidden
+
+    .swiper-slide
+      min-height: 480px
+      max-height: 1080px
+      height: 100vh
+
+      .slider-caption
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        align-items: center
+
+        .title_small
+          +font-size(20)
+          color: #FFF
+          text-transform: uppercase
+          font-weight: 700
+          +letter-spacing(600)
+          margin-top: 0
+          text-shadow: 0px 4px 5.88px rgba(0, 0, 0, 0.2)
+          margin-top: 0
+          margin-bottom: 30px
+
+        .title_main
+          +font-size(50)
+          color: #FFF
+          font-weight: 700
+          text-transform: uppercase
+          text-shadow: 0px 4px 5.88px rgba(0, 0, 0, 0.2)
+          margin-top: 0
+          margin-bottom: 40px
+
+        .content
+          color: #FFF
+          +line-height(26)
+          margin-bottom: 50px
+
+        .dt-btn
+          margin-right: 15px
+
+      [data-animate]
+        opacity: 0
+        transition-delay: 0.6s
+
+      &.swiper-slide-active
+        [data-animate]
+          opacity: 1
+
+    > .corpo_next_nav,
+    > .corpo_prev_nav
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 100
+
+    > .corpo_prev_nav
+      left: 40px
+
+    > .corpo_next_nav
+      right: 40px
+
+  &.alternate-style
+
+    > .corpo_slider_container
+
+      > .slider-control
+        position: absolute
+        top: 10%
+        right: 0
+        left: 0
+        z-index: 100
+
+        @media (min-width: 700px)
+          .transparent-menu &
+            top: 20%
+
+        .corpo_prev_nav,
+        .corpo_next_nav
+          float: left
+
+        .nav_sep
+          width: 3px
+          height: 50px
+          float: left
+          background-color: #FFF
+          margin-left: 25px
+          margin-right: 25px
+          transform: translateY(-5px)
+
+  // Responsiveness
+  @media (max-width: 1024px)
+    > .corpo_slider_container
+      .container
+        max-width: 750px
+
+  @media (max-width: 768px)
+    > .corpo_slider_container
+      .swiper-slide
+        .slider-caption
+          
+          .title_small
+            margin-bottom: 10px
+            +letter-spacing(200)
+
+          .title_main
+            +font-size(40)
+            margin-bottom: 20px
+
+      .container
+        max-width: 600px
+
+      > .corpo_prev_nav
+        left: 15px
+
+      > .corpo_next_nav
+        right: 15px
+
+  @media (max-width: 600px)
+    > .corpo_slider_container
+      > .corpo_next_nav,
+      > .corpo_prev_nav
+        top: 25px
+        left: 15px
+        right: auto
+        transform: none
+
+      > .slider-control
+        top: 20px !important
+
+      > .corpo_next_nav
+        left: 80px
+
+  @media (max-width: 380px)
+    > .corpo_slider_container
+      > .slider-control,
+      > .corpo_next_nav,
+      > .corpo_prev_nav
+        display: none
+
+
+
+.swiper-pagination-bullets
+  width: auto
+  right: 12%
+  left: auto
+  bottom: 25px
+
+  .swiper-pagination-bullet
+    width: 10px
+    border-radius: 0
+    background: #FFF
+    opacity: 1
+  .swiper-pagination-bullet-active
+    background: $color-theme
+
+.overlay
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background-color: rgba(0,0,0, 0.5)

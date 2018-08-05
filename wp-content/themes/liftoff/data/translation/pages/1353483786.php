@@ -1,0 +1,40 @@
+<?php 
+// Translation strings
+__('Design Settings', 'runway');
+__('General', 'runway');
+__('Logo', 'runway');
+__('Logo Title', 'runway');
+__('Logo Tagline', 'runway');
+__('Logo Image', 'runway');
+__('Link URL', 'runway');
+__('Link Colors', 'runway');
+__('Link', 'runway');
+__('Hover', 'runway');
+__('Underline Links', 'runway');
+__('Underline on Hover', 'runway');
+__('Font Styles', 'runway');
+__('Default', 'runway');
+__('Headings', 'runway');
+__('Header', 'runway');
+__('Text Color', 'runway');
+__('Background', 'runway');
+__('Image', 'runway');
+__('Footer', 'runway');
+__('Configure the appearance of your site and customize it for your needs . Set logos, colors, fonts and more.', 'runway');
+__('Optional', 'runway');
+__('The site name or logo text.', 'runway');
+__('Show tagline below the logo text.', 'runway');
+__('Select an optional image for the site logo.', 'runway');
+__('The URL to link the site logo. If blank the default site URL is used.', 'runway');
+__('Underline on hover.', 'runway');
+__('Choose the heading font family.', 'runway');
+__('For example: 12, 24px, 1em, 1.75', 'runway');
+__('Click the button to edit Google font styles.', 'runway');
+__('Set the header text color.', 'runway');
+__('The background color of the header.', 'runway');
+__('Optional background image.', 'runway');
+__('Horizontal position of the background image.', 'runway');
+__('Vertical position of the background image.', 'runway');
+__('Background image repeat.', 'runway');
+__('The background color of the footer.', 'runway');
+?>

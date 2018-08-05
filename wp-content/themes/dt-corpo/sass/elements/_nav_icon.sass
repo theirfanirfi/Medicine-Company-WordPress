@@ -1,0 +1,76 @@
+.corpo_prev_nav,
+.corpo_next_nav
+	display: block
+	position: relative
+	width: 40px
+	height: 40px
+	border: 1px solid #e5e5e5
+	border-right: none
+	position: relative
+	transition: all 0.15s ease-in-out
+
+	.page-numbers:hover &
+		background-color: transparent
+
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		height: 25%
+		width: 1px
+		background-color: #e5e5e5
+		top: 0
+		right: 0
+		transition: all 0.15s ease-in-out
+
+	&:after
+		top: auto
+		bottom: 0
+
+	> i
+		position: absolute
+		font-size: 30px
+		color: #e5e5e5
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		transition: all 0.15s ease-in-out
+	
+	.nav-next a:hover &,
+	.nav-previous a:hover &,
+	&:hover
+		cursor: pointer
+		border-color: $color_theme
+		
+		&:before,
+		&:after
+			background-color: $color_theme
+		> i
+			color: $color_theme
+
+.corpo_prev_nav
+	> i
+		right: -25%
+
+	.nav-next a:hover &,
+	.nav-previous a:hover &,
+	&:hover
+		> i
+			right: 0
+
+.corpo_next_nav
+	border-right: 1px solid #e5e5e5
+	border-left: none
+
+	&:before,
+	&:after
+		left: 0
+
+	> i
+		left: -25%
+
+	.nav-next a:hover &,
+	.nav-previous a:hover &,
+	&:hover
+		> i
+			left: 0

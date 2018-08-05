@@ -1,0 +1,38 @@
+.list-style
+	padding: 0
+	list-style: none
+
+	li 
+		font-size: 1.2em
+		margin-bottom: 10px
+		line-height: 1
+	
+	// Iconic style
+	&.iconic li > i
+		color: $color_theme
+		padding-right: 10px
+
+	// Square style
+	&.square li
+
+		&:before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 15px
+			background-color: $color_theme
+			transform: translateY(-1px)
+
+	// Rounded style
+	&.round li
+
+		&:before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 15px
+			border-radius: 50%
+			background-color: $color_theme
+			transform: translateY(-1px)

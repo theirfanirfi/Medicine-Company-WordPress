@@ -1,0 +1,32 @@
+.corpo_google_map
+
+  > .map_trigger
+    text-align: center
+    padding: 40px 0
+    background: $color_theme
+
+    > button
+      color: #FFF
+      background-color: transparent
+      border: none
+      outline: none
+
+      > i
+        padding-left: 5px
+
+      &:hover
+        background: none
+  
+  > .map_display_area
+    height: 0px
+    opacity: 0
+    overflow: hidden
+    transition: all 0.3s ease-in-out
+
+    &.map_active
+      height: 400px
+      opacity: 1
+
+    > .gmap3-area
+      height: 400px
+    

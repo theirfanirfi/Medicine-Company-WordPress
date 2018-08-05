@@ -1,0 +1,48 @@
+/* Aboute Two */
+
+#aboute-two
+  padding: 135px 0
+  background-size: cover
+  background-repeat: no-repeat
+
+  .btn-skew
+    &:after
+      height: 80px
+
+    &:hover
+      &:after
+        height: 200px
+
+.aboute-caption
+  .aboute-title
+    +font-size(50)
+    font-weight: 700
+    color: #111
+    margin-top: 0
+    margin-bottom: 30px
+
+    span
+      color: $color_theme
+
+  p
+    color: #6d6c6c
+    +line-height(26)
+    margin-bottom: 35px
+
+.aboute-details
+  margin-bottom: 50px
+  p
+    margin-bottom: 0
+    +line-height(40)
+    margin-left: 20px
+    position: relative
+
+    &:before
+      position: absolute
+      background: $color_theme
+      height: 10px
+      width: 10px
+      content: ''
+      left: -20px
+      top: 15px
+      border-radius: 50%

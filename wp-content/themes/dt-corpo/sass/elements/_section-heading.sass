@@ -1,0 +1,45 @@
+.corpo_section_heading
+  max-width: 550px
+  
+  > .section-content
+    margin-bottom: 50px
+
+  > .section-title
+    +font-size(32)
+    font-weight: 700
+    color: #111111
+    margin-top: 0
+    margin-bottom: 30px
+    position: relative
+
+    .transparent_row &
+      color: #FFF
+  
+  &.stripe > .section-title
+    padding-bottom: 20px
+
+    &:after
+      content: ''
+      background: $color_theme
+      height: 5px
+      width: 50px
+      bottom: 0
+      position: absolute
+      left: 0
+
+  &.text-right
+    float: right
+
+    > .section-title:after
+      left: auto
+      right: 0
+
+  &.text-center
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+    > .section-title:after
+      left: 50%
+      right: 50%
+      transform: translate(-50%)

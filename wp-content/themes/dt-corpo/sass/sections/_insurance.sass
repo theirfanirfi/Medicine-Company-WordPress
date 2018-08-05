@@ -1,0 +1,85 @@
+/* Insurance */
+.insurance
+  padding: 50px 0 30px
+
+.insurance-thumb
+  img
+    width: 100%
+
+  h2
+    +font-size(24)
+    color: #111
+
+.insurance-content
+  border-top: 1px solid #ededed
+  border-bottom: 1px solid #ededed
+  border-right: 1px solid #ededed
+  padding: 10px 10px 10px 0
+  margin-bottom: 15px
+
+
+
+  p
+    color: #6d6c6c
+
+  .insu-thumb
+    padding: 20px 0
+    margin: 0
+    list-style: none
+
+    li
+      display: inline-block
+      width: 30%
+      margin-right: 30px
+
+      &:last-child
+        margin-right: 0
+
+      img
+        width: 100%
+
+.insu-support
+  border: 1px solid #ededed
+  margin-top: 20px
+  margin-bottom: 20px
+  .support
+    border-right: 1px solid #ededed
+    width: 33%
+    padding: 26px 10px
+    float: left
+    cursor: pointer
+    .support-logo
+      float: left
+      margin-left: 40px
+      margin-right: 10px
+      i
+        +font-size(45)
+        color: #7e7e7e
+        transition: all 0.3s ease-in-out
+
+    .support-title
+      p
+        color: #7e7e7e
+        margin-bottom: 0
+        transition: all 0.3s ease-in-out
+
+      h5
+        +font-size(24)
+        color: #7e7e7e
+        margin: 0
+        transition: all 0.3s ease-in-out
+
+    &:last-child
+      border: none
+
+    &:hover
+      .support-logo
+        i
+          color: $color_theme
+
+      .support-title
+        p
+          color: #111
+
+        h5
+          color: $color-theme

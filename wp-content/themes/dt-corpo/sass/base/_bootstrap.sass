@@ -1,0 +1,46 @@
+html
+  font-size: 14px
+
+body
+  +font-smoothing
+  color: $color_text
+  font-family: 'Roboto', sans-serif
+  font-size: 14px
+  backface-visibility: hidden
+  word-break: break-word
+
+[data-bg-image]
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+  font-weight: 600
+
+a
+  color: #111
+  transition: all 0.25s ease-in-out
+
+  &:focus,
+  &:hover
+    color: lighten(#111, 10%)
+
+
+// 404 Page
+.error-404.not-found
+  max-width: 600px
+  margin: 150px auto
+  text-align: center
+
+#visual_composer_page,
+.corpo_inside_page.for-vc
+  overflow-x: hidden
+
+.inner-row-shadow
+  box-shadow: 0px -20px 36px 4px rgba(0, 0, 0, 0.2)
+  position: relative
+  z-index: 100
+
+  @media (max-width: 767px)
+    &.vc_inner
+      margin-top: 0 !important

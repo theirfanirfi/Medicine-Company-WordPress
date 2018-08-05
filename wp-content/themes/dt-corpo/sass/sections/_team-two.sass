@@ -1,0 +1,121 @@
+/* Team Carousel */
+.corpo_members_carousel
+  position: relative
+  padding-top: 10px
+  padding-bottom: 10px
+
+  .dt-social-link a
+    color: #fff;
+
+    &:hover
+      color: $color_theme
+
+  > .details_area_carousel,
+  > .thumbs_area_carousel
+    overflow: hidden
+
+  > .details_area_carousel
+    position: relative
+    z-index: 1
+    padding-right: 115px;
+
+    .swiper-slide
+
+      > img
+        float: left
+        max-width: 290px
+
+      > .slider-content
+        margin-left: 310px
+
+        > .dt-btn
+          margin-top: 10px
+
+        > h4
+          +font-size(24)
+          font-weight: 700
+          color: $color_theme
+
+
+        > span
+          color: #c8c8c8
+          display: block
+          margin-bottom: 30px
+
+        > p
+          color: #c8c8c8
+          +line-height(26)
+          margin-bottom: 50px
+
+    > .corpo_next_nav,
+    > .corpo_prev_nav
+      right: 38px
+      position: absolute
+      width: 26px
+      height: 26px
+      z-index: 100
+
+      > i
+        font-size: 18px
+
+
+    > .corpo_next_nav
+      top: auto
+      bottom: 0
+      transform: rotate(90deg)
+
+    > .corpo_prev_nav
+      transform: rotate(90deg)
+      top: 0
+      left: auto
+
+  > .thumbs_area_carousel
+    width: 100px
+    height: 275px
+    position: absolute
+    z-index: 2
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+
+    .swiper-slide
+      height: 100%
+      opacity: 0.3
+      overflow: hidden
+
+      > img
+        width: 100%
+        height: auto
+
+    .swiper-slide-active
+      opacity: 1
+
+
+  @media (max-width: 992px)
+    > .details_area_carousel
+      padding-right: 0
+
+      > .corpo_next_nav,
+      > .corpo_prev_nav
+        top: auto
+        bottom: 0
+        right: 0
+        transform: none
+
+      > .corpo_prev_nav
+        right: 50px
+
+    > .thumbs_area_carousel
+      display: none
+
+  @media (max-width: 500px)
+    .details_area_carousel .swiper-slide
+      text-align: center
+
+      > img
+        float: none
+        width: 150px
+
+      > .slider-content
+        margin-left: 0px
+        text-align: left
